@@ -1,0 +1,10 @@
+.extend-element{
+    width:90%;
+}
+
+.move-left{
+    width: 100%; 
+    display: flex; 
+    align-items: flex-start;
+    text-align: left;
+}
