@@ -15,14 +15,6 @@ const db = require("./db");
 const dbName = "Hackathon";
 const collectionName = "workerdata";
 
-let corsOption = {
-    origin: true,
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    credentials: true,
-    exposedHeaders: ['x-auth-token']
-  };
-  server.use(cors(corsOption));
-
 //Set Static Folder
 server.use(express.static(path.join(__dirname, 'public')));
 server.get('*', (req, res) => {
