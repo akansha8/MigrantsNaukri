@@ -24,10 +24,10 @@ let corsOption = {
   server.use(cors(corsOption));
 
 //Set Static Folder
-server.use(express.static(path.join(__dirname, 'public')));
-server.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/index.html'));
-  });
+// server.use(express.static(path.join(__dirname, 'public')));
+// server.get('*', (req, res) => {
+//     res.sendFile(path.join(__dirname, 'public/index.html'));
+//   });
   
 
 db.initialize(dbName, collectionName, function(dbCollection) { // successCallback
