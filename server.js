@@ -2,28 +2,18 @@ const express = require("express");
 const server = express();
 const cors = require('cors');
 const path = require('path');
-
 const body_parser = require("body-parser");
-
-// parse JSON (application/json content-type)
-server.use(body_parser.json());
-
-let port =process.env.PORT || 8080;
-
+let port = process.env.PORT || 8080;
 // << db setup >>
 const db = require("./db");
 const dbName = "Hackathon";
 const collectionName = "workerdata";
-
-//Set Static Folder
 server.use(express.static(path.join(__dirname, 'public')));
-server.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/index.html'));
-  });
-  
-
-db.initialize(dbName, collectionName, function(dbCollection) { // successCallback
-
+server.use(body_parser.urlencoded({
+    extended: true
+}));
+server.use(body_parser.json());
+db.initialize(dbName, collectionName, function (dbCollection) { // successCallback
     server.post("/api/workerDataInsert", (request, response) => {
         const insertData = request.body;
         dbCollection.insertOne(insertData, (error, result) => { // callback of insertOne
@@ -35,7 +25,6 @@ db.initialize(dbName, collectionName, function(dbCollection) { // successCallbac
             });
         });
     });
-
     server.get("/api/migrantList", (request, response) => {
         dbCollection.find().toArray((error, result) => {
             if (error) throw error;
@@ -45,25 +34,28 @@ db.initialize(dbName, collectionName, function(dbCollection) { // successCallbac
     server.get("/api/migrantListHeader", (request, response) => {
         dbCollection.distinct(
             "skillset",
-            {}, 
-            (function(err, docs){
-                 if(err){
-                     return console.log(err);
-                 }
-                 if(docs){  
+            {},
+            (function (err, docs) {
+                if (err) {
+                    return console.log(err);
+                }
+                if (docs) {
                     response.json(docs);
-                 }
+                }
             })
-         );
+        );
 
     });
-    
+    //Set Static Folder
+    server.get('*', (req, res) => {
+        res.sendFile(path.join(__dirname, 'public/index.html'));
+    });
 
-}, function(err) { // failureCallback
+}, function (err) { // failureCallback
     console.log(err)
     throw (err);
 });
-
 server.listen(port, () => {
     console.log(`Server listening at ${port}`);
 });
+
