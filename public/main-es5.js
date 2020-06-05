@@ -71,7 +71,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<mat-grid-list cols=\"4\" rowHeight=\"1:1\">\n    <mat-grid-tile></mat-grid-tile>\n    <mat-grid-tile>\n        <a href=\"/shramikForm\">Migrant Labor Force Employment Form</a>\n    </mat-grid-tile>\n    <mat-grid-tile>\n        <a href=\"/shramikDetail\">Migrant Labor Information </a>\n    </mat-grid-tile>\n    <mat-grid-tile></mat-grid-tile>\n</mat-grid-list>";
+    __webpack_exports__["default"] = "<mat-grid-list cols=\"4\" rowHeight=\"1:1\">\n    <mat-grid-tile></mat-grid-tile>\n    <mat-grid-tile>\n       <a href=\"/shramikForm\">Migrant Labor Force Employment Form</a>\n    </mat-grid-tile>\n    <mat-grid-tile>\n        <a href=\"/shramikDetail\">Migrant Labor Information </a>\n    </mat-grid-tile>\n    <mat-grid-tile></mat-grid-tile>\n</mat-grid-list>";
     /***/
   },
 
@@ -91,7 +91,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<button mat-icon-button aria-label=\"Dashboard\">\n    <mat-icon style=\"color: rgb(30, 90, 160);\" routerLink=\"/\">home</mat-icon>\n</button>\n\n<p>worker-detail works!</p>";
+    __webpack_exports__["default"] = "<button mat-icon-button aria-label=\"Dashboard\">\n    <mat-icon style=\"color: rgb(30, 90, 160);\" routerLink=\"/\">home</mat-icon>\n</button>\n\n<mat-grid-tile [colspan]=\"4\" [rowspan]=\"2\">\n</mat-grid-tile>\n\n<mat-grid-tile [colspan]=\"4\" [rowspan]=\"2\"> </mat-grid-tile>\n\n<div class=\"example-container\">\n    SkillSet :\n    <select [(ngModel)]=\"headerLabel\" (ngModelChange)=\"searchProduct()\">\n        <option selected >--Select--</option>\n        <option *ngFor=\"let prod of ProductHeader\">{{prod}} </option>\n    </select>\n\n\n    <div *ngIf=\"headerLabel\">\n        <h5>You have selected: {{headerLabel}} </h5>\n    </div>\n</div>\n<div class=\"example\" #TABLE>\n    <h4>Skill Details:</h4>\n    <table id=\"ExampleMaterialTable\" class=\"TFtable\" #table>\n        <tr>\n            <th>Name</th>\n            <th>Mobile Number</th>\n            <th>Current Address</th>\n            <th>Gender</th>\n        </tr>\n        <tr *ngFor=\"let Prod of ProductDetails\">\n            <td>{{Prod.firstName + \" \" + Prod.lastName}}</td>\n            <td>{{Prod.mobNum}}</td>\n            <td>{{Prod.cAddress}}</td>\n            <td>{{Prod.gender}}</td>\n        </tr>\n\n    </table>\n    <br>\n    <div>\n        <button class=\"btnWidth\" color=\"primary\" mat-raised-button (click)=\"exportTable()\">Export</button>\n    </div>\n\n</div>";
     /***/
   },
 
@@ -111,7 +111,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<button mat-icon-button aria-label=\"Dashboard\">\n    <mat-icon style=\"color: rgb(30, 90, 160);\" routerLink=\"/\">home</mat-icon>\n</button>\n<mat-grid-list cols=\"12\" rowHeight=\"100px\" gutterSize=\"0px\">\n    <mat-grid-tile [colspan]=\"4\" [rowspan]=\"2\" [style.background]=colors[0] *ngIf=\"showSpinner\">\n    </mat-grid-tile>\n    <mat-card class=\"my-card\">\n        <mat-card-header>\n            <mat-card-title>Registration</mat-card-title>\n        </mat-card-header>\n        <div *ngIf=\"registerError\"  class=\"loginErrMsg\">Failed to Register the User.</div>\n\n        <mat-card-content>\n            <!-- The form goes here -->\n            <form class=\"my-form\">\n                <mat-tab-group>\n                    <mat-tab label=\"MigrantsEmployment\" class=\"my-tab\">\n                        <table style=\"width: 100%\" cellspacing=\"100\">\n                            <tr>\n                                <td>\n                                    <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\">\n                                    <div class=\"move-left\">\n                                        <mat-form-field class=\"extend-element\">\n                                            <mat-label>First Name</mat-label>\n                                            <input matInput placeholder=\"Name\" [(ngModel)]=\"fname\" name=\"fname\" required/>\n                                            <!--<div *ngIf=\"submitted && f.firstName.errors\" class=\"invalid-feedback\">\t\n                                                    <div *ngIf=\"f.firstName.errors.required\">First Name is required</div>\n                                                </div>-->\n                                        </mat-form-field>\n                                        </div>\n                                    </mat-grid-tile>\n                                </td>\n                                <td>\n                                    <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\">\n                                            <div class=\"move-left\">\n                                        <mat-form-field class=\"extend-element\">\n                                            <mat-label>Middle Name</mat-label>\n                                            <input matInput placeholder=\"Name\" [(ngModel)]=\"mname\" name=\"mname\">\n                                        </mat-form-field>\n                                            </div>\n                                    </mat-grid-tile>\n                                </td>\n\n                                <td>\n                                    <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\">\n                                            <div class=\"move-left\">\n                                        <mat-form-field class=\"extend-element\">\n                                            <mat-label>Last Name</mat-label>\n                                            <input matInput placeholder=\"Name\" [(ngModel)]=\"lname\" name=\"lname\" required>\n                                        </mat-form-field>\n                                        </div>\n                                    </mat-grid-tile>\n                                </td>\n                            </tr>\n\n                            <tr>\n                                <td>\n                                    <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\">\n                                            <div class=\"move-left\">\n                                        <mat-form-field class=\"extend-element\">\n                                            <mat-label>Mobile Number</mat-label>\n                                            <input matInput placeholder=\"+91\" [(ngModel)]=\"mob\" (keypress)=\"keyPress($event)\"  name=\"mob\" minlength=10 maxlength=10 required>\n                                        </mat-form-field>\n                                        </div>\n                                    </mat-grid-tile>\n                                </td>\n                            </tr>\n\n\n                            <td>\n                                <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\">\n                                        <div class=\"move-left\">\n                                    <mat-form-field class=\"extend-element\">\n                                        <mat-label>Alternate Mobile Number</mat-label>\n                                        <input matInput placeholder=\"+91\" [(ngModel)]=\"amob\" (keypress)=\"keyPress($event)\"  name=\"amob\" minlength=10 maxlength=10 >\n                                    </mat-form-field> \n                                    </div>\n                                </mat-grid-tile>\n                            </td>\n\n                            <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\"> </mat-grid-tile>\n\n\n\n                            <td>\n                                <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\">\n                                        <div class=\"move-left\">\n                                    <mat-label>Gender :</mat-label>\n                                    <mat-radio-button value=\"1\" required>Male</mat-radio-button>\n                                    <mat-radio-button value=\"2\" required>Female</mat-radio-button>\n                                        </div>\n                                </mat-grid-tile>\n                            </td>\n\n\n                            <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\"> </mat-grid-tile>\n                            <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\"></mat-grid-tile>\n\n\n                            <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\">\n                            <div class=\"move-left\">\n                                <mat-form-field appearance=\"fill\" class=\"extend-element\">\n                                    <mat-label>Current Address</mat-label>\n                                    <textarea matInput [(ngModel)]=\"address\" name=\"address\" placeholder=\"address\" required></textarea>\n                                </mat-form-field>\n                             </div>   \n                            </mat-grid-tile>\n\n                            <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\">\n                             <div class=\"move-left\">\n                                <mat-form-field appearance=\"fill\" class=\"extend-element\">\n                                    <mat-label>Permanent Address</mat-label>\n                                    <textarea matInput [(ngModel)]=\"paddress\" name=\"paddress\" placeholder=\"paddress\" required></textarea>\n                                </mat-form-field>\n                            </div>\n                            </mat-grid-tile>\n\n                            <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\"></mat-grid-tile>\n\n\n                            <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\">\n                            <div class=\"move-left\">\n                                <mat-form-field class=\"extend-element\">\n                                    <mat-label>Date Of Birth</mat-label>\n                                    <input matInput placeholder=\"(mm/dd/yyyy)\" [(ngModel)]=\"dob\" name=\"dob\" required>\n                                </mat-form-field>\n                            </div>\n                            </mat-grid-tile>\n\n                            <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\"></mat-grid-tile>\n                            <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\"></mat-grid-tile>\n\n                            <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\">\n                            <div class=\"move-left\">\n                                <mat-form-field class=\"extend-element\"> \n                                    <mat-label>Aadhar Number(Preferred)</mat-label>\n                                    <input matInput placeholder=\"anumber\" [(ngModel)]=\"anumber\" name=\"anumber\" maxlength=12>\n                                </mat-form-field>\n                            </div>   \n                            </mat-grid-tile>\n\n                            <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\"></mat-grid-tile>\n                            <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\"></mat-grid-tile>\n\n\n                            <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\">\n                                    <div class=\"move-left\">\n                                <mat-form-field class=\"extend-element\">\n                                    <mat-label>Skills Set</mat-label>\n                                    <input matInput [(ngModel)]=\"SkillsSet\" placeholder=\"SkillsSet\"  name=\"SkillsSet\" required>\n                                </mat-form-field>\n                                </div>\n                            </mat-grid-tile>\n\n                            <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\"></mat-grid-tile>\n                            <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\"></mat-grid-tile>\n\n\n                            <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\">\n                            <div class=\"move-left\">\n                                <mat-label>Employed/Unemployed : </mat-label>\n                                <mat-checkbox>Yes</mat-checkbox>\n                                <mat-checkbox>No</mat-checkbox>\n                            </div>\n                            </mat-grid-tile>\n                            <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\"></mat-grid-tile>\n                            <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\"></mat-grid-tile>\n\n\n                            <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\">\n                                    <div class=\"move-left\">\n                                <mat-form-field class=\"extend-element\">\n                                    <mat-label>Work Experience</mat-label>\n                                    <input matInput placeholder=\"workexperience\" [(ngModel)]=\"workexperience\" name=\"workexperience\">\n                                </mat-form-field>\n                                </div>\n                            </mat-grid-tile>\n                            <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\"></mat-grid-tile>\n                            <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\"></mat-grid-tile>\n\n\n                            <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\">\n                             <div class=\"move-left\">\n                                <mat-form-field class=\"extend-element\">\n                                    <mat-label>Education</mat-label>\n                                    <input matInput placeholder=\"Education\" [(ngModel)]=\"Education\" name=\"Education\" required>\n                                </mat-form-field>\n                                </div>\n                            </mat-grid-tile>\n\n\n                            <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\">\n                            <div class=\"move-left\">\n                                <mat-form-field class=\"extend-element\">\n                                    <mat-label>Highest Education</mat-label>\n                                    <input matInput placeholder=\"\" [(ngModel)]=\"hedu\" name=\"hedu\">\n                                </mat-form-field>\n                            </div>   \n                            </mat-grid-tile>\n\n                            <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\"></mat-grid-tile>\n\n                            <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\">\n                            <div class=\"move-left\">\n                                <!-- <mat-select (change)=\"selectInput($event)\">-->\n                                <mat-label> Daily waged employee: </mat-label>\n                                <mat-radio-button value=\"1\">Yes</mat-radio-button>\n                                <mat-radio-button value=\"2\">No</mat-radio-button>\n                                <!-- </mat-select>-->\n                             </div>   \n                            </mat-grid-tile>\n\n                            <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\">\n                            <div class=\"move-left\">\n                                <mat-form-field class=\"extend-element\">\n                                    <div class=\"form-group\" *ngIf=\"!isNameSelected\">\n                                        <mat-label>Company</mat-label>\n                                        <input matInput=\"text\" class=\"form-control\" id=\"address\">\n                                    </div>\n                                </mat-form-field>\n                            </div>   \n                            </mat-grid-tile>\n\n                            <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\"></mat-grid-tile>\n\n\n                            <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\">\n                             <div class=\"move-left\">\n                                <mat-label> Relocate : </mat-label>\n                                <mat-radio-button value=\"1\" required>Yes</mat-radio-button>\n                                <mat-radio-button value=\"2\" required>No</mat-radio-button>\n                             </div>   \n                            </mat-grid-tile>\n                            <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\"></mat-grid-tile>\n                            <mat-grid-tile [colspan]=\"3\" [rowspan]=\"1\"></mat-grid-tile>\n\n                            <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\">\n                             <div class=\"move-left\">\n                                <mat-form-field class=\"extend-element\">\n                                    <mat-label>Family count</mat-label>\n                                    <input matInput [(ngModel)]=\"Familycount\" placeholder=\"Familycount\" name=\"Familycount\" required>\n                                </mat-form-field>\n                             </div>    \n                            </mat-grid-tile>\n\n                        </table>\n                    </mat-tab>\n                </mat-tab-group>\n            </form>\n        </mat-card-content>\n\n        <mat-card-actions>\n            <!--<button mat-raised-button (click)=\"Register()\" color=\"primary\">Register</button> -->\n            <button class=\"btnWidth\" color=\"primary\" (click)=\"save();\" mat-raised-button>Save</button>\n            <button class=\"btnWidth\" color=\"primary\" (click)=\"cancel()\" mat-raised-button>Cancel</button>\n        </mat-card-actions>\n        <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\">\n        <p class=\"error\">{{error}}</p>\n        </mat-grid-tile>\n    </mat-card>\n\n</mat-grid-list>";
+    __webpack_exports__["default"] = "<div style=\"padding: 1%;\">\n    <button mat-icon-button aria-label=\"Dashboard\">\n        <mat-icon style=\"color: rgb(30, 90, 160);\" routerLink=\"/\">home</mat-icon>\n    </button>\n    <mat-grid-list cols=\"12\" rowHeight=\"100px\" gutterSize=\"0px\">\n        <mat-grid-tile [colspan]=\"4\" [rowspan]=\"2\" [style.background]=colors[0] *ngIf=\"showSpinner\">\n        </mat-grid-tile>\n\n        <mat-label>Registration</mat-label>\n\n        <form class=\"my-form\">\n            <mat-grid-tile [colspan]=\"4\" [rowspan]=\"2\" *ngIf=\"showSpinner\">\n            </mat-grid-tile>\n\n            <mat-grid-tile [colspan]=\"4\" [rowspan]=\"2\" *ngIf=\"showSpinner\">\n            </mat-grid-tile>\n\n            <div class=\"example-container\">\n                <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\">\n\n                    <div class=\"move-left\">\n                        <mat-form-field class=\"extend-element\">\n                            <mat-label>First Name</mat-label>\n                            <input matInput placeholder=\"Name\" [(ngModel)]=\"fname\" name=\"fname\" required />\n                        </mat-form-field>\n                    </div>\n                </mat-grid-tile>\n\n                <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\">\n                    <div class=\"move-left\">\n                        <mat-form-field class=\"extend-element\">\n                            <mat-label>Middle Name</mat-label>\n                            <input matInput placeholder=\"Name\" [(ngModel)]=\"mname\" name=\"mname\">\n                        </mat-form-field>\n                    </div>\n                </mat-grid-tile>\n\n                <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\">\n                    <div class=\"move-left\">\n                        <mat-form-field class=\"extend-element\">\n                            <mat-label>Last Name</mat-label>\n                            <input matInput placeholder=\"Name\" [(ngModel)]=\"lname\" name=\"lname\" required>\n                        </mat-form-field>\n                    </div>\n                </mat-grid-tile>\n\n                <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\">\n                    <div class=\"move-left\">\n                        <mat-form-field class=\"extend-element\">\n                            <mat-label>Mobile Number</mat-label>\n                            <input matInput placeholder=\"+91\" [(ngModel)]=\"mob\" (keypress)=\"keyPress($event)\" name=\"mob\"\n                                minlength=10 maxlength=10 required>\n                        </mat-form-field>\n                    </div>\n                </mat-grid-tile>\n\n                <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\">\n                    <div class=\"move-left\">\n                        <mat-form-field class=\"extend-element\">\n                            <mat-label>Alternate Mobile Number</mat-label>\n                            <input matInput placeholder=\"+91\" [(ngModel)]=\"amob\" (keypress)=\"keyPress($event)\"\n                                name=\"amob\" minlength=10 maxlength=10>\n                        </mat-form-field>\n                    </div>\n                </mat-grid-tile>\n\n                <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\"> </mat-grid-tile>\n\n\n                <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\">\n                    <div class=\"move-left\">\n                        <mat-label>Gender :</mat-label>\n                        <mat-radio-group aria-labelledby=\"example-radio-group-label\" class=\"\" [(ngModel)]=\"gender\" name=\"gender\">\n                            <mat-radio-button class=\"example-radio-button\" *ngFor=\"let c of genderVals\" [value]=\"c\">\n                                {{c}}\n                            </mat-radio-button>\n                        </mat-radio-group>\n                    </div>\n                </mat-grid-tile>\n\n\n                <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\"> </mat-grid-tile>\n                <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\"></mat-grid-tile>\n\n\n                <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\">\n                    <div class=\"move-left\">\n                        <mat-form-field appearance=\"fill\" class=\"extend-element\">\n                            <mat-label>Current Address</mat-label>\n                            <textarea matInput [(ngModel)]=\"address\" name=\"address\" placeholder=\"address\"\n                                required></textarea>\n                        </mat-form-field>\n                    </div>\n                </mat-grid-tile>\n\n                <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\">\n                    <div class=\"move-left\">\n                        <mat-form-field appearance=\"fill\" class=\"extend-element\">\n                            <mat-label>Permanent Address</mat-label>\n                            <textarea matInput [(ngModel)]=\"paddress\" name=\"paddress\" placeholder=\"paddress\"\n                                required></textarea>\n                        </mat-form-field>\n                    </div>\n                </mat-grid-tile>\n\n                <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\"></mat-grid-tile>\n\n\n                <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\">\n                    <div class=\"move-left\">\n                        <mat-form-field class=\"extend-element\">\n                            <mat-label>Date Of Birth</mat-label>\n                            <input matInput placeholder=\"(mm/dd/yyyy)\" [(ngModel)]=\"dob\" name=\"dob\" required>\n                        </mat-form-field>\n                    </div>\n                </mat-grid-tile>\n\n                <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\"></mat-grid-tile>\n                <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\"></mat-grid-tile>\n\n                <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\">\n                    <div class=\"move-left\">\n                        <mat-form-field class=\"extend-element\">\n                            <mat-label>Aadhar Number(Preferred)</mat-label>\n                            <input matInput placeholder=\"anumber\" [(ngModel)]=\"anumber\" name=\"anumber\" maxlength=12>\n                        </mat-form-field>\n                    </div>\n                </mat-grid-tile>\n\n                <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\"></mat-grid-tile>\n                <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\"></mat-grid-tile>\n\n\n                <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\">\n                    <div class=\"move-left\">\n                        <mat-form-field class=\"extend-element\">\n                            <mat-label>Skills Set</mat-label>\n                            <input matInput [(ngModel)]=\"SkillsSet\" placeholder=\"SkillsSet\" name=\"SkillsSet\" required>\n                        </mat-form-field>\n                    </div>\n                </mat-grid-tile>\n\n                <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\"></mat-grid-tile>\n                <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\"></mat-grid-tile>\n\n\n                <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\">\n                    <div class=\"move-left\">\n                        <mat-label>Employed/Unemployed : </mat-label>\n                        <mat-radio-group aria-labelledby=\"example-radio-group-label\" class=\"\" [(ngModel)]=\"employed\" name=\"employed\">\n                            <mat-radio-button class=\"example-radio-button\" *ngFor=\"let c of choice\" [value]=\"c\">\n                                {{c}}\n                            </mat-radio-button>\n                        </mat-radio-group>\n                    </div>\n                </mat-grid-tile>\n                <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\"></mat-grid-tile>\n                <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\"></mat-grid-tile>\n\n\n                <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\">\n                    <div class=\"move-left\">\n                        <mat-form-field class=\"extend-element\">\n                            <mat-label>Work Experience</mat-label>\n                            <input matInput placeholder=\"workexperience\" [(ngModel)]=\"workexperience\"\n                                name=\"workexperience\" required>\n                        </mat-form-field>\n                    </div>\n                </mat-grid-tile>\n                <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\"></mat-grid-tile>\n                <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\"></mat-grid-tile>\n\n\n                <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\">\n                    <div class=\"move-left\">\n                        <mat-form-field class=\"extend-element\">\n                            <mat-label>Education</mat-label>\n                            <input matInput placeholder=\"Education\" [(ngModel)]=\"Education\" name=\"Education\" required>\n                        </mat-form-field>\n                    </div>\n                </mat-grid-tile>\n\n\n                <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\">\n                    <div class=\"move-left\">\n                        <mat-form-field class=\"extend-element\">\n                            <mat-label>Highest Education</mat-label>\n                            <input matInput placeholder=\"\" [(ngModel)]=\"hedu\" name=\"hedu\">\n                        </mat-form-field>\n                    </div>\n                </mat-grid-tile>\n\n                <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\"></mat-grid-tile>\n\n                <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\">\n                    <div class=\"move-left\">\n                        <!-- <mat-select (change)=\"selectInput($event)\">-->\n                        <mat-label> Daily waged employee: </mat-label>\n                        <mat-radio-group aria-labelledby=\"example-radio-group-label\" class=\"\" [(ngModel)]=\"dailywaged\" name=\"dailywaged\">\n                            <mat-radio-button class=\"example-radio-button\" *ngFor=\"let c of choice\" [value]=\"c\">\n                                {{c}}\n                            </mat-radio-button>\n                        </mat-radio-group>\n                        <!-- </mat-select>-->\n                    </div>\n                </mat-grid-tile>\n\n                <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\">\n                    <div class=\"move-left\">\n                        <mat-form-field class=\"extend-element\">\n                            <div class=\"form-group\" *ngIf=\"!isNameSelected\">\n                                <mat-label>Company</mat-label>\n                                <input matInput=\"text\" class=\"form-control\" id=\"address\">\n                            </div>\n                        </mat-form-field>\n                    </div>\n                </mat-grid-tile>\n\n                <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\"></mat-grid-tile>\n                <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\">\n                    <div class=\"move-left\">\n                        <mat-label>Willing to Relocate : </mat-label>\n                        <mat-radio-group aria-labelledby=\"example-radio-group-label\" class=\"\" [(ngModel)]=\"relocate\" name=\"relocate\">\n                            <mat-radio-button class=\"example-radio-button\" *ngFor=\"let c of choice\" [value]=\"c\">\n                                {{c}}\n                            </mat-radio-button>\n                        </mat-radio-group>\n                    </div>\n                </mat-grid-tile>\n                <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\"></mat-grid-tile>\n                <mat-grid-tile [colspan]=\"3\" [rowspan]=\"1\"></mat-grid-tile>\n\n                <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\">\n                    <div class=\"move-left\">\n                        <mat-form-field class=\"extend-element\">\n                            <mat-label>Family count</mat-label>\n                            <input matInput [(ngModel)]=\"Familycount\" placeholder=\"Familycount\" name=\"Familycount\"\n                                required>\n                        </mat-form-field>\n                    </div>\n                </mat-grid-tile>\n\n            </div>\n            <mat-grid-tile [colspan]=\"4\" [rowspan]=\"1\">\n                <p style=\"color: red;\">\n                    {{error}}\n                </p>\n            </mat-grid-tile>\n        </form>\n    </mat-grid-list>\n    <mat-card-actions>\n        <button class=\"btnWidth\" color=\"primary\" (click)=\"save()\" mat-raised-button>Register</button>\n        <button class=\"btnWidth\" color=\"primary\" (click)=\"onReset()\" mat-raised-button>Cancel</button>\n    </mat-card-actions>\n</div>";
     /***/
   },
 
@@ -911,67 +911,73 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _app_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @angular/common/http */
+    "./node_modules/@angular/common/fesm2015/http.js");
+    /* harmony import */
+
+
+    var _app_routing_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! ./app-routing.module */
     "./src/app/app-routing.module.ts");
     /* harmony import */
 
 
-    var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    var _app_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
     /*! ./app.component */
     "./src/app/app.component.ts");
     /* harmony import */
 
 
-    var _worker_form_worker_form_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    var _worker_form_worker_form_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
     /*! ./worker-form/worker-form.component */
     "./src/app/worker-form/worker-form.component.ts");
     /* harmony import */
 
 
-    var _worker_detail_worker_detail_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    var _worker_detail_worker_detail_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
     /*! ./worker-detail/worker-detail.component */
     "./src/app/worker-detail/worker-detail.component.ts");
     /* harmony import */
 
 
-    var _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    var _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
     /*! ./dashboard/dashboard.component */
     "./src/app/dashboard/dashboard.component.ts");
     /* harmony import */
 
 
-    var _angular_material_grid_list__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+    var _angular_material_grid_list__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
     /*! @angular/material/grid-list */
     "./node_modules/@angular/material/esm2015/grid-list.js");
     /* harmony import */
 
 
-    var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+    var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
     /*! @angular/platform-browser/animations */
     "./node_modules/@angular/platform-browser/fesm2015/animations.js");
     /* harmony import */
 
 
-    var _angular_forms__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+    var _angular_forms__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
     /*! @angular/forms */
     "./node_modules/@angular/forms/fesm2015/forms.js");
     /* harmony import */
 
 
-    var _angular_material__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+    var _angular_material__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
     /*! @angular/material */
     "./node_modules/@angular/material/esm2015/material.js");
     /* harmony import */
 
 
-    var _angular_material_radio__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+    var _angular_material_radio__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
     /*! @angular/material/radio */
     "./node_modules/@angular/material/esm2015/radio.js");
     /* harmony import */
 
 
-    var _angular_material_select__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
+    var _angular_material_select__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
     /*! @angular/material/select */
     "./node_modules/@angular/material/esm2015/select.js"); // tslint:disable-next-line: max-line-length
 
@@ -981,10 +987,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     };
 
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
-      declarations: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"], _worker_form_worker_form_component__WEBPACK_IMPORTED_MODULE_5__["WorkerFormComponent"], _worker_detail_worker_detail_component__WEBPACK_IMPORTED_MODULE_6__["WorkerDetailComponent"], _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_7__["DashboardComponent"]],
-      imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"], _angular_material_grid_list__WEBPACK_IMPORTED_MODULE_8__["MatGridListModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_9__["BrowserAnimationsModule"], _angular_material__WEBPACK_IMPORTED_MODULE_11__["MatButtonModule"], _angular_material__WEBPACK_IMPORTED_MODULE_11__["MatIconModule"], _angular_material__WEBPACK_IMPORTED_MODULE_11__["MatCardModule"], _angular_material__WEBPACK_IMPORTED_MODULE_11__["MatTabsModule"], _angular_material__WEBPACK_IMPORTED_MODULE_11__["MatFormFieldModule"], _angular_material__WEBPACK_IMPORTED_MODULE_11__["MatInputModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__["FormsModule"], _angular_material_radio__WEBPACK_IMPORTED_MODULE_12__["MatRadioModule"], _angular_material__WEBPACK_IMPORTED_MODULE_11__["MatCheckboxModule"], _angular_material_select__WEBPACK_IMPORTED_MODULE_13__["MatSelectModule"]],
+      declarations: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"], _worker_form_worker_form_component__WEBPACK_IMPORTED_MODULE_6__["WorkerFormComponent"], _worker_detail_worker_detail_component__WEBPACK_IMPORTED_MODULE_7__["WorkerDetailComponent"], _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_8__["DashboardComponent"]],
+      imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"], _angular_material_grid_list__WEBPACK_IMPORTED_MODULE_9__["MatGridListModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_10__["BrowserAnimationsModule"], _angular_material__WEBPACK_IMPORTED_MODULE_12__["MatButtonModule"], _angular_material__WEBPACK_IMPORTED_MODULE_12__["MatIconModule"], _angular_material__WEBPACK_IMPORTED_MODULE_12__["MatCardModule"], _angular_material__WEBPACK_IMPORTED_MODULE_12__["MatTabsModule"], _angular_material__WEBPACK_IMPORTED_MODULE_12__["MatFormFieldModule"], _angular_material__WEBPACK_IMPORTED_MODULE_12__["MatInputModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_11__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_11__["ReactiveFormsModule"], _angular_material_radio__WEBPACK_IMPORTED_MODULE_13__["MatRadioModule"], _angular_material__WEBPACK_IMPORTED_MODULE_12__["MatCheckboxModule"], _angular_material_select__WEBPACK_IMPORTED_MODULE_14__["MatSelectModule"], _angular_material__WEBPACK_IMPORTED_MODULE_12__["MatTableModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"]],
       providers: [],
-      bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
+      bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
     })], AppModule);
     /***/
   },
@@ -1067,6 +1073,243 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   },
 
   /***/
+  "./src/app/services/worker-detail.servie.ts":
+  /*!**************************************************!*\
+    !*** ./src/app/services/worker-detail.servie.ts ***!
+    \**************************************************/
+
+  /*! exports provided: WorkerDetailService */
+
+  /***/
+  function srcAppServicesWorkerDetailServieTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "WorkerDetailService", function () {
+      return WorkerDetailService;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/common/http */
+    "./node_modules/@angular/common/fesm2015/http.js");
+    /* harmony import */
+
+
+    var _environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ../../environments/environment */
+    "./src/environments/environment.ts");
+
+    var WorkerDetailService = /*#__PURE__*/function () {
+      function WorkerDetailService(http) {
+        _classCallCheck(this, WorkerDetailService);
+
+        this.http = http;
+        this.url = "".concat(_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].url, "/api");
+      }
+
+      _createClass(WorkerDetailService, [{
+        key: "getMigrantsList",
+        value: function getMigrantsList() {
+          return this.http.get("".concat(this.url, "/migrantList/"));
+        }
+      }, {
+        key: "getMigrantsHeader",
+        value: function getMigrantsHeader() {
+          return this.http.get("".concat(this.url, "/migrantListHeader/"));
+        }
+      }]);
+
+      return WorkerDetailService;
+    }();
+
+    WorkerDetailService.ctorParameters = function () {
+      return [{
+        type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]
+      }];
+    };
+
+    WorkerDetailService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+      providedIn: 'root'
+    })], WorkerDetailService);
+    /***/
+  },
+
+  /***/
+  "./src/app/services/worker-form.service.ts":
+  /*!*************************************************!*\
+    !*** ./src/app/services/worker-form.service.ts ***!
+    \*************************************************/
+
+  /*! exports provided: WorkerformService */
+
+  /***/
+  function srcAppServicesWorkerFormServiceTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "WorkerformService", function () {
+      return WorkerformService;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/common/http */
+    "./node_modules/@angular/common/fesm2015/http.js");
+    /* harmony import */
+
+
+    var _environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ../../environments/environment */
+    "./src/environments/environment.ts");
+
+    var WorkerformService = /*#__PURE__*/function () {
+      function WorkerformService(http) {
+        _classCallCheck(this, WorkerformService);
+
+        this.http = http;
+        this.url = "".concat(_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].url, "/api");
+      }
+
+      _createClass(WorkerformService, [{
+        key: "insertData",
+        value: function insertData(data) {
+          return this.http.post("".concat(this.url, "/workerDataInsert"), data);
+        }
+      }]);
+
+      return WorkerformService;
+    }();
+
+    WorkerformService.ctorParameters = function () {
+      return [{
+        type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]
+      }];
+    };
+
+    WorkerformService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+      providedIn: 'root'
+    })], WorkerformService);
+    /***/
+  },
+
+  /***/
+  "./src/app/worker-detail/tableUtil.ts":
+  /*!********************************************!*\
+    !*** ./src/app/worker-detail/tableUtil.ts ***!
+    \********************************************/
+
+  /*! exports provided: TableUtil */
+
+  /***/
+  function srcAppWorkerDetailTableUtilTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "TableUtil", function () {
+      return TableUtil;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var xlsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! xlsx */
+    "./node_modules/xlsx/xlsx.js");
+    /* harmony import */
+
+
+    var xlsx__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(xlsx__WEBPACK_IMPORTED_MODULE_1__);
+
+    var getFileName = function getFileName(name) {
+      var timeSpan = new Date().toISOString();
+      var sheetName = name || 'ExportResult';
+      var fileName = "".concat(sheetName, "-").concat(timeSpan);
+      return {
+        sheetName: sheetName,
+        fileName: fileName
+      };
+    };
+
+    var TableUtil = /*#__PURE__*/function () {
+      function TableUtil() {
+        _classCallCheck(this, TableUtil);
+      }
+
+      _createClass(TableUtil, null, [{
+        key: "exportTableToExcel",
+        value: function exportTableToExcel(tableId, name) {
+          var _getFileName = getFileName(name),
+              sheetName = _getFileName.sheetName,
+              fileName = _getFileName.fileName;
+
+          var targetTableElm = document.getElementById(tableId);
+          var wb = xlsx__WEBPACK_IMPORTED_MODULE_1__["utils"].table_to_book(targetTableElm, {
+            sheet: sheetName
+          });
+          xlsx__WEBPACK_IMPORTED_MODULE_1__["writeFile"](wb, "".concat(fileName, ".xlsx"));
+        }
+      }, {
+        key: "exportArrayToExcel",
+        value: function exportArrayToExcel(arr, name) {
+          var _getFileName2 = getFileName(name),
+              sheetName = _getFileName2.sheetName,
+              fileName = _getFileName2.fileName;
+
+          var wb = xlsx__WEBPACK_IMPORTED_MODULE_1__["utils"].book_new();
+          var ws = xlsx__WEBPACK_IMPORTED_MODULE_1__["utils"].json_to_sheet(arr);
+          xlsx__WEBPACK_IMPORTED_MODULE_1__["utils"].book_append_sheet(wb, ws, sheetName);
+          xlsx__WEBPACK_IMPORTED_MODULE_1__["writeFile"](wb, "".concat(fileName, ".xlsx"));
+        }
+      }]);
+
+      return TableUtil;
+    }();
+    /***/
+
+  },
+
+  /***/
   "./src/app/worker-detail/worker-detail.component.css":
   /*!***********************************************************!*\
     !*** ./src/app/worker-detail/worker-detail.component.css ***!
@@ -1082,7 +1325,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3dvcmtlci1kZXRhaWwvd29ya2VyLWRldGFpbC5jb21wb25lbnQuY3NzIn0= */";
+    __webpack_exports__["default"] = ".example-container{\r\n    align-content: center;\r\n    flex-direction: column;\r\n    max-height: 500px;\r\n    min-width: 300px;\r\n    margin-bottom: 10px;\r\n    margin-left: 75px;\r\n   \r\n}\r\n\r\n.example{\r\n  margin-left: 75px;\r\n}\r\n\r\n.TFtable{\r\n    width: 40%;\r\n}\r\n\r\ntable {\r\n    border-collapse: collapse;\r\n  }\r\n\r\ntable, th, td {\r\n    border: 1px solid black;\r\n  }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvd29ya2VyLWRldGFpbC93b3JrZXItZGV0YWlsLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxxQkFBcUI7SUFDckIsc0JBQXNCO0lBQ3RCLGlCQUFpQjtJQUNqQixnQkFBZ0I7SUFDaEIsbUJBQW1CO0lBQ25CLGlCQUFpQjs7QUFFckI7O0FBRUE7RUFDRSxpQkFBaUI7QUFDbkI7O0FBR0E7SUFDSSxVQUFVO0FBQ2Q7O0FBRUE7SUFDSSx5QkFBeUI7RUFDM0I7O0FBRUE7SUFDRSx1QkFBdUI7RUFDekIiLCJmaWxlIjoic3JjL2FwcC93b3JrZXItZGV0YWlsL3dvcmtlci1kZXRhaWwuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5leGFtcGxlLWNvbnRhaW5lcntcclxuICAgIGFsaWduLWNvbnRlbnQ6IGNlbnRlcjtcclxuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XHJcbiAgICBtYXgtaGVpZ2h0OiA1MDBweDtcclxuICAgIG1pbi13aWR0aDogMzAwcHg7XHJcbiAgICBtYXJnaW4tYm90dG9tOiAxMHB4O1xyXG4gICAgbWFyZ2luLWxlZnQ6IDc1cHg7XHJcbiAgIFxyXG59XHJcblxyXG4uZXhhbXBsZXtcclxuICBtYXJnaW4tbGVmdDogNzVweDtcclxufVxyXG5cclxuXHJcbi5URnRhYmxle1xyXG4gICAgd2lkdGg6IDQwJTtcclxufVxyXG5cclxudGFibGUge1xyXG4gICAgYm9yZGVyLWNvbGxhcHNlOiBjb2xsYXBzZTtcclxuICB9XHJcbiAgXHJcbiAgdGFibGUsIHRoLCB0ZCB7XHJcbiAgICBib3JkZXI6IDFweCBzb2xpZCBibGFjaztcclxuICB9Il19 */";
     /***/
   },
 
@@ -1117,19 +1360,77 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _tableUtil__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! ./tableUtil */
+    "./src/app/worker-detail/tableUtil.ts");
+    /* harmony import */
+
+
+    var _services_worker_detail_servie__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ../services/worker-detail.servie */
+    "./src/app/services/worker-detail.servie.ts");
 
     var WorkerDetailComponent = /*#__PURE__*/function () {
-      function WorkerDetailComponent() {
+      function WorkerDetailComponent(workerdetail) {
+        var _this = this;
+
         _classCallCheck(this, WorkerDetailComponent);
+
+        this.workerdetail = workerdetail;
+        this.headerLabel = "";
+        this.ProductDetails = [];
+        this.workerdetail.getMigrantsHeader().subscribe(function (resp) {
+          _this.ProductHeader = resp;
+        });
+        this.workerdetail.getMigrantsList().subscribe(function (resp) {
+          _this.Products = resp;
+        });
       }
 
       _createClass(WorkerDetailComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {}
+      }, {
+        key: "exportTable",
+        value: function exportTable() {
+          _tableUtil__WEBPACK_IMPORTED_MODULE_2__["TableUtil"].exportTableToExcel('ExampleMaterialTable');
+        }
+      }, {
+        key: "exportArray",
+        value: function exportArray() {
+          var onlyNameAndSymbolArr = this.dataSource.map(function (x) {
+            return {
+              name: x.name,
+              symbol: x.symbol
+            };
+          });
+
+          _tableUtil__WEBPACK_IMPORTED_MODULE_2__["TableUtil"].exportArrayToExcel(onlyNameAndSymbolArr, 'ExampleArray');
+        }
+      }, {
+        key: "searchProduct",
+        value: function searchProduct() {
+          var _this2 = this;
+
+          var obj = this.Products.filter(function (m) {
+            return m.skillset == _this2.headerLabel;
+          });
+          this.ProductDetails = obj;
+          return this.ProductDetails;
+        }
       }]);
 
       return WorkerDetailComponent;
     }();
+
+    WorkerDetailComponent.ctorParameters = function () {
+      return [{
+        type: _services_worker_detail_servie__WEBPACK_IMPORTED_MODULE_3__["WorkerDetailService"]
+      }];
+    };
 
     WorkerDetailComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-worker-detail',
@@ -1159,7 +1460,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = ".extend-element{\r\n    width:90%;\r\n}\r\n\r\n.move-left{\r\n    width: 100%; \r\n    display: flex; \r\n    align-items: flex-start;\r\n    text-align: left;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvd29ya2VyLWZvcm0vd29ya2VyLWZvcm0uY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLFNBQVM7QUFDYjs7QUFFQTtJQUNJLFdBQVc7SUFDWCxhQUFhO0lBQ2IsdUJBQXVCO0lBQ3ZCLGdCQUFnQjtBQUNwQiIsImZpbGUiOiJzcmMvYXBwL3dvcmtlci1mb3JtL3dvcmtlci1mb3JtLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZXh0ZW5kLWVsZW1lbnR7XHJcbiAgICB3aWR0aDo5MCU7XHJcbn1cclxuXHJcbi5tb3ZlLWxlZnR7XHJcbiAgICB3aWR0aDogMTAwJTsgXHJcbiAgICBkaXNwbGF5OiBmbGV4OyBcclxuICAgIGFsaWduLWl0ZW1zOiBmbGV4LXN0YXJ0O1xyXG4gICAgdGV4dC1hbGlnbjogbGVmdDtcclxufSJdfQ== */";
+    __webpack_exports__["default"] = ".extend-element{\r\n    width:70%;\r\n    padding-top:1.34375em;\r\n    font-weight: 600;\r\n}\r\n\r\n.move-left{\r\n    width: 100%; \r\n    display: flex; \r\n    align-items: flex-start;\r\n    text-align: left;\r\n}\r\n\r\n.btnWidth{\r\n    margin: 0% 1% 1% 1%;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvd29ya2VyLWZvcm0vd29ya2VyLWZvcm0uY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLFNBQVM7SUFDVCxxQkFBcUI7SUFDckIsZ0JBQWdCO0FBQ3BCOztBQUVBO0lBQ0ksV0FBVztJQUNYLGFBQWE7SUFDYix1QkFBdUI7SUFDdkIsZ0JBQWdCO0FBQ3BCOztBQUVBO0lBQ0ksbUJBQW1CO0FBQ3ZCIiwiZmlsZSI6InNyYy9hcHAvd29ya2VyLWZvcm0vd29ya2VyLWZvcm0uY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5leHRlbmQtZWxlbWVudHtcclxuICAgIHdpZHRoOjcwJTtcclxuICAgIHBhZGRpbmctdG9wOjEuMzQzNzVlbTtcclxuICAgIGZvbnQtd2VpZ2h0OiA2MDA7XHJcbn1cclxuXHJcbi5tb3ZlLWxlZnR7XHJcbiAgICB3aWR0aDogMTAwJTsgXHJcbiAgICBkaXNwbGF5OiBmbGV4OyBcclxuICAgIGFsaWduLWl0ZW1zOiBmbGV4LXN0YXJ0O1xyXG4gICAgdGV4dC1hbGlnbjogbGVmdDtcclxufVxyXG5cclxuLmJ0bldpZHRoe1xyXG4gICAgbWFyZ2luOiAwJSAxJSAxJSAxJTtcclxufSJdfQ== */";
     /***/
   },
 
@@ -1194,20 +1495,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _services_worker_form_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! ../services/worker-form.service */
+    "./src/app/services/worker-form.service.ts");
 
     var WorkerFormComponent = /*#__PURE__*/function () {
-      // tslint:disable-next-line: adjacent-overload-signatures
-      //ngOnInit() {
-      //}
-      function WorkerFormComponent() {
+      function WorkerFormComponent(workerFormService) {
         _classCallCheck(this, WorkerFormComponent);
+
+        this.workerFormService = workerFormService;
+        this.showErrMsg1 = false;
+        this.showErrMsg2 = false;
+        this.error = '';
+        this.choice = ['Yes', 'No'];
+        this.genderVals = ['Male', 'Female', 'Others'];
       }
 
       _createClass(WorkerFormComponent, [{
-        key: "ngOnInit",
-        value: function ngOnInit() {//  throw new Error("Method not implemented.");
-        }
-      }, {
         key: "selectInput",
         value: function selectInput(event) {
           var selected = event.target.value; // tslint:disable-next-line: triple-equals
@@ -1228,10 +1535,96 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             event.preventDefault();
           }
         }
+      }, {
+        key: "save",
+        value: function save() {
+          if (this.fname == 'undefined' || this.fname == null) {
+            this.error = '* Please enter first name';
+          } else if (this.lname == 'undefined' || this.lname == null) {
+            // this.required = true;
+            this.error = '* Please enter last name';
+          } else if (this.mob == null) {
+            this.required = true;
+            this.error = '* Please enter Mobile Number';
+          } else if (this.address == 'undefined' || this.address == null) {
+            this.required = true;
+            this.error = '* Please Enter Current Address with pincode';
+          } else if (this.paddress == null) {
+            this.required = true;
+            this.error = '* Please Enter Permanent Address with pincode';
+          } else if (this.dob == null) {
+            this.required = true;
+            this.error = '* Please Enter date of birth';
+          } else if (this.SkillsSet == 'undefined' || this.SkillsSet == null) {
+            this.required = true;
+            this.error = '* Please add your SkillsSet';
+          } else if (this.workexperience == null) {
+            this.required = true;
+            this.error = '* Please Enter your work experience';
+          } else if (this.Education == null) {
+            this.required = true;
+            this.error = '* Please Enter Education Details';
+          } else if (this.Familycount == null) {
+            this.required = true;
+            this.error = '* Please Enter Familycount';
+          }
+
+          var Data = {
+            firstName: this.fname,
+            middleName: this.mname,
+            lastName: this.lname,
+            mobNum: this.mob,
+            aMobNum: this.amob,
+            gender: this.gender,
+            adhaar: this.anumber,
+            cAddress: this.address,
+            pAddress: this.paddress,
+            dob: this.dob,
+            skillset: this.SkillsSet,
+            employed: this.employed,
+            highestEducation: this.Education,
+            Workexperience: this.workexperience,
+            opentoRelocate: this.relocate,
+            dailyWagedEmployee: this.dailywaged,
+            highestDegree: this.hedu,
+            numberOfFamilyMembers: this.Familycount
+          };
+          console.log(Data);
+          this.workerFormService.insertData(Data).subscribe(function (resp) {
+            console.log(resp);
+          });
+        }
+      }, {
+        key: "onReset",
+        value: function onReset() {
+          this.submitted = false;
+          this.fname = [];
+          this.lname = [];
+          this.mname = [];
+          this.mob = [];
+          this.amob = [];
+          this.gender = [];
+          this.address = [];
+          this.paddress = [];
+          this.dob = [];
+          this.anumber = [];
+          this.SkillsSet = [];
+          this.workexperience = [];
+          this.relocate = [];
+          this.Education = [];
+          this.hedu = [];
+          this.Familycount = [];
+        }
       }]);
 
       return WorkerFormComponent;
     }();
+
+    WorkerFormComponent.ctorParameters = function () {
+      return [{
+        type: _services_worker_form_service__WEBPACK_IMPORTED_MODULE_2__["WorkerformService"]
+      }];
+    };
 
     WorkerFormComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-worker-form',
@@ -1275,6 +1668,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
     var environment = {
+      url: '',
+      nodTransfer: 2,
+      nodDataset: 3,
+      nodClose: 5,
       production: false
     };
     /*
@@ -1356,6 +1753,51 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     module.exports = __webpack_require__(
     /*! C:\Users\asriva63\Documents\Co(vi)de_Hackathon\MigrantsNaukriPortal\src\main.ts */
     "./src/main.ts");
+    /***/
+  },
+
+  /***/
+  1:
+  /*!********************!*\
+    !*** fs (ignored) ***!
+    \********************/
+
+  /*! no static exports found */
+
+  /***/
+  function _(module, exports) {
+    /* (ignored) */
+
+    /***/
+  },
+
+  /***/
+  2:
+  /*!************************!*\
+    !*** crypto (ignored) ***!
+    \************************/
+
+  /*! no static exports found */
+
+  /***/
+  function _(module, exports) {
+    /* (ignored) */
+
+    /***/
+  },
+
+  /***/
+  3:
+  /*!************************!*\
+    !*** stream (ignored) ***!
+    \************************/
+
+  /*! no static exports found */
+
+  /***/
+  function _(module, exports) {
+    /* (ignored) */
+
     /***/
   }
 }, [[0, "runtime", "vendor"]]]);

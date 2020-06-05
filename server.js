@@ -24,32 +24,48 @@ let corsOption = {
   server.use(cors(corsOption));
 
 //Set Static Folder
-// server.use(express.static(path.join(__dirname, 'public')));
-// server.get('*', (req, res) => {
-//     res.sendFile(path.join(__dirname, 'public/index.html'));
-//   });
+server.use(express.static(path.join(__dirname, 'public')));
+server.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/index.html'));
+  });
   
 
 db.initialize(dbName, collectionName, function(dbCollection) { // successCallback
 
-    server.post("/workerDataInsert", (request, response) => {
+    server.post("/api/workerDataInsert", (request, response) => {
         const insertData = request.body;
         dbCollection.insertOne(insertData, (error, result) => { // callback of insertOne
             if (error) throw error;
             // return updated list
             dbCollection.find().toArray((_error, _result) => { // callback of find
                 if (_error) throw _error;
-                response.json(_result);
+                response.json("Success");
             });
         });
     });
 
-    server.get("/workerData", (request, response) => {
+    server.get("/api/migrantList", (request, response) => {
         dbCollection.find().toArray((error, result) => {
             if (error) throw error;
             response.json(result);
         });
     });
+    server.get("/api/migrantListHeader", (request, response) => {
+        dbCollection.distinct(
+            "skillset",
+            {}, 
+            (function(err, docs){
+                 if(err){
+                     return console.log(err);
+                 }
+                 if(docs){  
+                    response.json(docs);
+                 }
+            })
+         );
+
+    });
+    
 
 }, function(err) { // failureCallback
     console.log(err)
