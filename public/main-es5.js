@@ -413,7 +413,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div style=\"padding: 5% 10%;\">\n    <div style=\"padding-bottom: 2%;\">\n        <button mat-icon-button aria-label=\"Dashboard\">\n            <mat-icon style=\"color:#007bff\" routerLink=\"/\">home</mat-icon>\n        </button>\n        <mat-label style=\"font-size:18px;font-weight:550;margin-left:40%;color:#007bff\">Migrants\n            Information</mat-label>\n    </div>\n    <div>\n        <div>\n            <mat-form-field style=\"width: 400px;\">\n                <mat-label style=\"font-size:18px;font-weight:550;color:#007bff;\">Please select Skill Set</mat-label>\n                <mat-select [(ngModel)]=\"headerLabel\" (ngModelChange)=\"searchProduct()\">\n                    <mat-option *ngFor=\"let prod of ProductHeader\" [value]=\"prod\">\n                        {{prod}}\n                    </mat-option>\n                </mat-select>\n            </mat-form-field>\n        </div>\n        <div *ngIf=\"headerLabel\" class=\"example\" #TABLE>\n            <table id=\"ExampleMaterialTable\" class=\"TFtable\" #table>\n                <tr>\n                    <th class=\"head\">Name</th>\n                    <th class=\"head\">Mobile Number</th>\n                    <th class=\"head\" style=\"width: 250px;\">Current Address</th>\n                    <th class=\"head\"> Gender</th>\n                    <th class=\"head\"> Highest Education</th>\n                    <th class=\"head\"> Employed</th>\n                    <th class=\"head\"> WorkExperience</th>\n                    <th class=\"head\"> Relocate</th>\n                </tr>\n                <tr *ngFor=\"let Prod of ProductDetails\">\n                    <td>{{Prod.firstName + \" \" + Prod.lastName}}</td>\n                    <td>{{Prod.mobNum}}</td>\n                    <td>{{Prod.cAddress}}</td>\n                    <td>{{Prod.gender}}</td>\n                    <td>{{Prod.hedu}}</td>\n                    <td>{{Prod.employed}}</td>\n                    <td>{{Prod.workexperience}}</td>\n                    <td>{{Prod.relocate}}</td>\n                </tr>\n            </table>\n\n            <div>\n                <button class=\"btnWidth\" color=\"primary\" mat-raised-button (click)=\"exportTable()\">Export</button>\n            </div>\n\n        </div>\n\n    </div>\n\n</div>";
+    __webpack_exports__["default"] = "<div style=\"padding: 5% 10%;\">\n    <div style=\"padding-bottom: 2%;\">\n        <button mat-icon-button aria-label=\"Dashboard\">\n            <mat-icon style=\"color:#007bff\" routerLink=\"/\">home</mat-icon>\n        </button>\n        <mat-label style=\"font-size:18px;font-weight:550;margin-left:40%;color:#007bff\">Migrants\n            Information</mat-label>\n    </div>\n    <div>\n        <div>\n            <mat-form-field style=\"width: 400px;\">\n                <mat-label style=\"font-size:18px;font-weight:550;color:#007bff;\">Please select Skill Set</mat-label>\n                <mat-select [(ngModel)]=\"headerLabel\" (ngModelChange)=\"searchProduct()\">\n                    <mat-option *ngFor=\"let prod of ProductHeader\" [value]=\"prod\">\n                        {{prod}}\n                    </mat-option>\n                </mat-select>\n            </mat-form-field>\n        </div>\n        <div *ngIf=\"headerLabel\" class=\"example\" #TABLE>\n            <table id=\"ExampleMaterialTable\" class=\"TFtable\" #table>\n                <tr>\n                    <th class=\"head\">Name</th>\n                    <th class=\"head\">Mobile Number</th>\n                    <th class=\"head\" style=\"width: 250px;\">Current Address</th>\n                    <th class=\"head\"> Gender</th>\n                    <th class=\"head\"> Highest Education</th>\n                    <th class=\"head\"> Employed</th>\n                    <th class=\"head\"> WorkExperience</th>\n                    <th class=\"head\"> Relocate</th>\n                </tr>\n                <tr *ngFor=\"let Prod of ProductDetails\">\n                    <td>{{Prod.firstName + \" \" + Prod.lastName}}</td>\n                    <td>{{Prod.mobNum}}</td>\n                    <td style=\"width: 250px;\">{{Prod.cAddress}}</td>\n                    <td>{{Prod.gender}}</td>\n                    <td>{{Prod.hedu}}</td>\n                    <td>{{Prod.employed}}</td>\n                    <td>{{Prod.workexperience}}</td>\n                    <td>{{Prod.relocate}}</td>\n                </tr>\n            </table>\n\n            <div>\n                <button class=\"btnWidth\" color=\"primary\" mat-raised-button (click)=\"exportTable()\">Export</button>\n            </div>\n\n        </div>\n\n    </div>\n\n</div>";
     /***/
   },
 
@@ -2027,23 +2027,23 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         value: function save() {
           var _this3 = this;
 
-          if (this.fname == undefined || this.fname == null) {
+          if (this.fname == undefined || this.fname == null || this.fname.length === 0) {
             this.error = '* Please Enter First name!';
-          } else if (this.lname == undefined || this.lname == null) {
+          } else if (this.lname == undefined || this.lname == null || this.lname.length === 0) {
             this.error = '* Please Enter Last name!';
-          } else if (this.mob == undefined || this.mob == null) {
+          } else if (this.mob == undefined || this.mob == null || this.mob.length === 0) {
             this.error = '* Please Enter Mobile Number!';
-          } else if (this.address == undefined || this.address == null) {
+          } else if (this.address == undefined || this.address == null || this.address.length === 0) {
             this.error = '* Please Enter Current Address with pincode!';
-          } else if (this.paddress == undefined || this.paddress == null) {
+          } else if (this.paddress == undefined || this.paddress == null || this.paddress.length === 0) {
             this.error = '* Please Enter Permanent Address with pincode!';
-          } else if (this.dob == undefined || this.dob == null) {
+          } else if (this.dob == undefined || this.dob == null || this.dob.length === 0) {
             this.error = '* Please Enter Date of birth!';
-          } else if (this.SkillsSet == undefined || this.SkillsSet == null) {
+          } else if (this.SkillsSet == undefined || this.SkillsSet == null || this.SkillsSet.length === 0) {
             this.error = '* Please select your Skills Set!';
-          } else if (this.workexperience == undefined || this.workexperience == null) {
+          } else if (this.workexperience == undefined || this.workexperience == null || this.workexperience.length === 0) {
             this.error = '* Please Enter your Work Experience!';
-          } else if (this.Education == undefined || this.Education == null) {
+          } else if (this.Education == undefined || this.Education == null || this.Education.length === 0) {
             this.error = '* Please Enter Education Details!';
           } else {
             this.error = "";
