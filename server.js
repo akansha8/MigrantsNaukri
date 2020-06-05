@@ -8,7 +8,7 @@ const body_parser = require("body-parser");
 // parse JSON (application/json content-type)
 server.use(body_parser.json());
 
-const port = 4000;
+let port =process.env.PORT || 8080;
 
 // << db setup >>
 const db = require("./db");
