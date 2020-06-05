@@ -1,0 +1,5 @@
+applications:
+    - name: Naukri
+      memory: 128M
+      buildpack: sdk-for-nodejs
+    
